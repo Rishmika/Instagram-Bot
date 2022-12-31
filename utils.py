@@ -129,19 +129,19 @@ async def upload(m, bot, chat_id, dir):
         await bot.send_photo(chat_id=chat_id, photo=pic)
         up+=1
         rm-=1
-        await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+        await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm} \n\n @EmoBotDevolopers")
     if totalvideo==1:
         video=' '.join([str(elem) for elem in VDO])
         await bot.send_video(chat_id=chat_id, video=video)
         up+=1
         rm-=1
-        await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+        await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm} \n\n @EmoBotDevolopers")
     if totalgif==1:
         video=' '.join([str(elem) for elem in GIF])
         await bot.send_video(chat_id=chat_id, video=video)
         up+=1
         rm-=1
-        await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+        await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}\n\n @EmoBotDevolopers")
     if totalpics >= 2:
         for i in range(0, len(PIC), 10):
             chunk = PIC[i:i + 10]
@@ -156,7 +156,7 @@ async def upload(m, bot, chat_id, dir):
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 await bot.send_media_group(chat_id=chat_id, media=media, disable_notification=True)
-            await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+            await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}\n\n @EmoBotDevolopers")
 
     if totalvideo >= 2:
         for i in range(0, len(VDO), 10):
@@ -172,19 +172,19 @@ async def upload(m, bot, chat_id, dir):
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 await bot.send_media_group(chat_id=chat_id, media=media, disable_notification=True)
-            await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+            await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}\n\n @EmoBotDevolopers")
     if totalgif >= 2:
         for gif in GIF:
             try:
                 await bot.send_video(chat_id=chat_id, video=gif)
                 up+=1
                 rm-=1
-                await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+                await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}\n\n @EmoBotDevolopers")
             except FloodWait as e:
                 await bot.send_video(chat_id=chat_id, video=gif)
                 up+=1
                 rm-=1
-                await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}")
+                await m.edit(f"Total: {total}\nUploaded: {up} Remaining to upload: {rm}\n\n @EmoBotDevolopers")
     await m.unpin()
     await bot.send_message(
         chat_id=chat_id,
@@ -192,12 +192,12 @@ async def upload(m, bot, chat_id, dir):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-					InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-					InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
+					InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/ImRishmika'),
+					InlineKeyboardButton("🤖Other Bots", url="https://t.me/EmoBotDevolopers")
 				],
 				[
-					InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
-                    InlineKeyboardButton("⚡️Update Channel", url="https://t.me/subin_works")
+					InlineKeyboardButton("Follow", url="https://github.com/RishBroProMax"),
+                    InlineKeyboardButton("⚡️Update Channel", url="https://t.me/EmoBotDevolopers")
 				]
 			]
 			)
