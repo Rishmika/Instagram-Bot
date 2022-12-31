@@ -45,12 +45,12 @@ async def login(bot, message):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
+						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/ImRishmika'),
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/EmoBotDevolopers")
 					],
                     [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
-						InlineKeyboardButton("🧩Deploy Own Bot", url="https://heroku.com/deploy?template=https://github.com/subinps/Instagram-Bot")
+                        InlineKeyboardButton("RishbroproMax", url="https://github.com/RishbroProMax"),
+						InlineKeyboardButton("Assistant", url="t.me/ImRishmika_Bot")
                     ],
                     [
                         InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin")
@@ -63,7 +63,7 @@ async def login(bot, message):
         return
     username=USER
     if 1 in STATUS:
-        m=await bot.send_message(message.from_user.id, "Fetching details from Instagram")
+        m=await bot.send_message(message.from_user.id, "Fetching details from Instagram...")
         profile = Profile.own_profile(insta.context)
         mediacount = profile.mediacount
         name = profile.full_name
@@ -81,9 +81,9 @@ async def login(bot, message):
         return
     while True:
         try:
-            password = await bot.ask(text = f"Helo {USER} Enter your Instagram Password to login into your account 🙈", chat_id = message.from_user.id, filters=filters.text, timeout=30)
+            password = await bot.ask(text = f"Helo {USER} Enter your Instagram Password to login into your account 🙈 \n We have Sure Mongo Sever And Databse.", chat_id = message.from_user.id, filters=filters.text, timeout=30)
         except TimeoutError:
-            await bot.send_message(message.from_user.id, "Error!!\n\nRequest timed out.\nRestart by using /login")
+            await bot.send_message(message.from_user.id, "Error!!\n\nRequest timed out.\nRestart by using /login \n What The Fuck !")
             return
         passw=password.text
         break
